@@ -1,6 +1,6 @@
 /* Carts.css */
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -147,10 +147,14 @@
   outline: none;
   box-sizing: border-box;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
   transition: outline 0.2s ease-in-out, box-sizing 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, outline 0.2s ease-in-out, box-sizing 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    outline 0.2s ease-in-out, box-sizing 0.2s ease-in-out;
 }
 
 .view-more {
@@ -174,10 +178,14 @@
   outline: none;
   box-sizing: border-box;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
   transition: outline 0.2s ease-in-out, box-sizing 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, outline 0.2s ease-in-out, box-sizing 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    outline 0.2s ease-in-out, box-sizing 0.2s ease-in-out;
 }
 
 .spinner-container {
@@ -202,7 +210,6 @@
     transform: rotate(360deg);
   }
 }
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -213,35 +220,58 @@
 }
 
 .navbar-logo {
-  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: bold;
   color: #fff;
   text-decoration: none;
 }
 
 .navbar-links {
   display: flex;
-  gap: 20px;
+  align-items: center;
 }
 
-.navbar-link {
-  font-size: 18px;
-  color: #fff;
-  text-decoration: none;
-}
-
+.navbar-link,
 .navbar-cart {
-  font-size: 20px;
+  margin-left: 20px;
+  font-size: 1rem;
   color: #fff;
   text-decoration: none;
+  position: relative;
 }
 
-.navbar-link:hover,
-.navbar-cart:hover {
-  color: #ffa500;
+.cart-icon-container {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-h1{
+.cart-icon {
+  font-size: 1.5rem;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #e63946;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 20px;
+  text-align: center;
+}
+
+
+h1 {
   background: gray;
   margin-bottom: 10px;
   margin-top: -29px;
+}
+
+h1 {
+  margin-top: 10px;
+  text-align: center;
 }

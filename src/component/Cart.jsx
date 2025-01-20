@@ -1,20 +1,22 @@
-import { useDispatch } from "react-redux";
-import {addToCart} from "../store/cartSlice"
 
+import { useDispatch, useSelector } from 'react-redux'
+import {removeFromCart} from "../store/cartSlice"
 
-const Products = ({ product = [] }) => {
+const Cart = () => {
+    const cartItems = useSelector(state => state.cart);
+    const dispatch = useDispatch()
+
+    const removeToCart = (productId) =>{
+        dispatch(removeFromCart(productId));
   
-  const dispatch = useDispatch()
-  const addToCarts = (product) =>{
-    dispatch(addToCart(product));
-  }
-
-    return (
+    }
+  return (
+    <div>
       <div className="container">
-        <h1 className="title">Company Products</h1>
+        <h1 className="title">Carts</h1>
         <div className="grid">
-          {product.length > 0 ? (
-              product.map((product) => (
+          {cartItems.length > 0 ? (
+              cartItems.map((product) => (
                   <div key={product.id} className="card">
                     <img src={product.image} alt={product.title} className="card-img" />
                     <div className="card-content">
@@ -27,21 +29,21 @@ const Products = ({ product = [] }) => {
                       </div>
                       <p className="card-description">{product.description}</p>
                       <div className="card-actions">
-                        <button className="add-to-cart" onClick={()=> addToCarts(product)}>Add to Cart</button>
-                        <button className="view-more">View More</button>
+                        <button className="add-to-cart" onClick={()=> removeToCart(product.id)}>Remove</button> 
                       </div>
                     </div>
                   </div>
                 ))
           ) : (
               <p className="text-center text-gray-600">
-                There are no products available in the cart.
+                There are no Add Any products in the cart.
               </p>
             )}
         </div>
       </div>
-    );
-  };
-  
-  export default Products;
-  
+
+    </div>
+  )
+}
+
+export default Cart
