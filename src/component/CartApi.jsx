@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react'
-import Carts from './Carts';
+import Products from './Products';
+import { CART_API } from '../utils/constant';
 
 const CartApi = () => {
     const [cart, setCart] = useState([]);
@@ -8,9 +9,9 @@ const CartApi = () => {
     useEffect(()=>{
         const handleApiData = async () =>{
             try {
-                const response = await axios.get("https://fakestoreapi.com/products")
+                const response = await axios.get(`${CART_API}`);
                 setCart(response.data);
-                console.log(response.data);
+                // console.log(response.data);
             } catch (error) {
                 console.log(error);
             }
@@ -19,7 +20,7 @@ const CartApi = () => {
     },[]);
   return (
     <div>
-      <Carts product={cart} />
+      <Products product={cart} />
     </div>
   )
 }
