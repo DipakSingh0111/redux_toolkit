@@ -264,7 +264,6 @@
   text-align: center;
 }
 
-
 h1 {
   background: gray;
   margin-bottom: 10px;
@@ -274,4 +273,43 @@ h1 {
 h1 {
   margin-top: 10px;
   text-align: center;
+}
+
+/* filter */
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+}
+
+.filter-container label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.category-filter {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.category-filter:hover {
+  border-color: #007bff;
+}
+
+.category-filter:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
